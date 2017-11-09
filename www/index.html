@@ -1945,8 +1945,8 @@ snapSlider.noUiSlider.on('update', function( values, handle ) {
   </div><!--/////////// fin contacto-->
 	
 <!--/////////// Inicio Chat-->	
-  <div id='Chat' style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background-color:#FCDA3E; display:none">
-		<div style="position:absolute; width: 100%; height: 92%; top: 8%; background:#8E8E8E">
+  <div id='chat' style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background-color:#FCDA3E; display:none">
+		<div id='chat_frame' style="position:absolute; width: 100%; height: 92%; top: 8%; background:#8E8E8E">
 		
 		
 		
@@ -2811,8 +2811,8 @@ function abrir_canal(numero){
 				$('#bt_menu').show()
 				$('#bt_chat').show()
 				$('#mensajes').show()
-				$('#Chat').show()			
-				$('#Chat').load('chat.html')
+				$('#chat').show()			
+				$('#chat_frame').load('chat.html')
 				
 			})
 			
