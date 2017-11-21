@@ -2,21 +2,57 @@
 <html>
 
     <head>
+	
+		<script type="text/javascript">
+		/*
+			var query=window.location.search.substring(1);
+			q=query.split("&");
+			vars=[];
+			for(i=0;i<q.length;i++){
+				x=q[i].split("=");
+				k=x[0];
+				v=x[1];
+				vars[k]=v;
+			}
+			
+			console.log( location.search.substring(1) );
+			console.log( query );
+			console.log( q );
+			console.log( vars['id'] );
+			*/
+			
+			/*
+			alert(id)
+			alert(p_correo)
+			alert(foto1)
+			*/
+			var v_userId = p_correo;
+			
+		</script>	 
+	
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://apps.applozic.com https://maps.google.com https://maps.googleapis.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://apps.applozic.com 'unsafe-inline'">
 
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!-- 
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
+		-->
 
         <!-- Applozic Chat -->
         <link href="applozic/css/mck-combined.min.css" rel="stylesheet">
         <link href="applozic/css/app/mck-sidebox-1.0.css" rel="stylesheet">
+	
         <link href="applozic/css/app/mck-mobile-fullview.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!--      <link href="applozic/css/app/mck-sidebox-full-1.0.css" rel="stylesheet"> -->
         <!-- Custom JS -->
+		
+
+
+		
         <script type="text/javascript">
             var $original;
             if (typeof jQuery !== 'undefined') {
@@ -24,22 +60,29 @@
                 $ = $original;
                 jQuery = $original;
             }
-        </script>
+        </script>	
+		
         <script src="applozic/js/jquery-2.2.2.min.js"></script>
+		
+		
+		
+		
+
         <!-- Applozic Chat -->
 
-        <title>Applozic PhoneGap Chat Demo</title>
+        <title>ConoceME!</title>
     </head>
-    <body>
+    <body class="bodyapp">
+		<!--
         <div class="section-center">
             <div class="">
-                <h2>Applozic PhoneGap Chat Demo</h2>
+                <h2>ConoceME!</h2>
             </div>
             <br><br>
             <form id="chat-form" class="ph35">
                 <div class="form-group">
                     <label for="userId">Enter your UserId</label><br>
-                    <input type="text" class="form-control" id="userId" name="userId" value = "phonegapdemo" required>
+                    <input type="text" class="form-control" id="userId" name="userId" value = "" required>
                 </div>
                 <br><br>
                 <div class="form-group mb-30">
@@ -52,8 +95,9 @@
         <script type="text/javascript">
             //app.initialize();
         </script>
+		-->
 
-        <div id="mck-sidebox" class="mck-sidebox mck-box fade">
+        <div id="mck-sidebox" class="mck-sidebox mck-box fade" style="z-index:-1">
         	<div class="mck-box-dialog mck-box-sm mck-right mck-bg-white">
         		<div id="mck-sidebox-content"
         			class="mck-sidebox-content mck-box-content">
@@ -68,19 +112,20 @@
         						</div>
         						<div class="blk-lg-8 mck-box-title">
         							<div id="mck-tab-title" class="mck-tab-title mck-truncate">
-        								Conversations</div>
+        								Chat</div>
         							<div id="mck-tab-status"
         								class="mck-tab-status mck-truncate n-vis"></div>
         							<div class="mck-typing-box mck-truncate n-vis">
-        								<span id="mck-typing-label">typing...</span>
+        								<span id="mck-typing-label">Escribiendo...</span>
         							</div>
         						</div>
         					</div>
         					<div id="mck-tab-conversation" class="mck-row">
-        						<h4 id="mck-conversation-title" class="mck-box-title mck-truncate">Conversations</h4>
+        						<h4 id="mck-conversation-title" class="mck-box-title mck-truncate">Chat</h4>
         					</div>
         				</div>
         				<div class="blk-lg-2">
+							<!-- jvra 
         					<button type="button"
         						class="mck-minimize-icon mck-box-close mck-close icon n-vis">
         						<span aria-hidden="true">&minus;</span>
@@ -90,6 +135,7 @@
         						data-dismiss="mckbox" aria-label="Close">
         						<span aria-hidden="true">&times;</span>
         					</button>
+							-->
         				</div>
         			</div>
         			<div id="mck-product-group"
@@ -132,8 +178,11 @@
         			</div>
         			<div id="mck-tab-option-panel"
         				class="mck-tab-panel mck-top-btn-panel">
+						<!-- JVRA
         				<div id="mck-tab-menu-box" class="mck-tab-menu-box vis">
+							
         					<div class="mck-row">
+							
         						<div class="blk-lg-2 move-right">
         							<div class="mck-dropdown-toggle" data-toggle="mckdropdown"
         								aria-expanded="true">
@@ -161,8 +210,13 @@
         								</li>
         							</ul>
         						</div>
+							
         					</div>
+							
+
         				</div>
+						
+						-->													
         			</div>
         			<div class="mck-box-body">
         				<div id="mck-message-cell" class="mck-tab-cell mck-message-cell">
@@ -202,7 +256,8 @@
         			<div id="mck-offline-message-box"
         				class="mck-offline-message-box n-vis">SET DEFAULT OFFLINE
         				MESSAGE!</div>
-        			<div id="mck-sidebox-ft" class="mck-box-ft">
+        			
+					<div id="mck-sidebox-ft" class="mck-box-ft">
         				<div class="mck-box-form mck-row n-vis">
         					<div class="blk-lg-12">
         						<p id="mck-msg-error" class="mck-sidebox-error n-vis"></p>
@@ -285,16 +340,20 @@
         				</div>
         				<div id="mck-contacts-content"
         					class="mck-contacts-content mck-text-center">
+						<!--  JVRA																
         					<button type="button" id="mck-msg-new"
         						class="mck-contact-search mck-btn mck-btn-blue" title="Start New">
         						<span>Start New</span>
         					</button>
+						-->
         				</div>
         			</div>
         			<div class="mck-running-on n-vis">
+					<!--  JVRA
         				<a href="https://www.applozic.com" target="_blank"><span
         					class="n-vis">Applozic Chat SDK</span><strong>Powered by
         						Applozic</strong></a>
+					-->
         			</div>
         		</div>
         		<div id="mck-sidebox-search"
@@ -304,10 +363,18 @@
         					<a href="#" role="link" class="mck-conversation-tab-link"><span
         						class="mck-icon-backward"></span></a>
         				</div>
+						
+						<!-- JVRA	
         				<div class="blk-lg-5">
+						
+						
         					<div class="mck-box-title mck-truncate" title="Start New">Start
         						New</div>
+						
         				</div>
+						
+						-->		
+						
         				<div
         					class="blk-lg-3 move-right mck-start-new-menu-item mck-tab-menu-box">
         					<div class="mck-dropdown-toggle" data-toggle="mckdropdown"
@@ -671,9 +738,16 @@
       	</script>
 
         <script type="text/javascript">
-            //var $applozic = jQuery.noConflict(true);
-            //Sample json contains display name and photoLink for userId
-            var contacts = {"user1": {"displayName": "Devashish", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, "user2": {"displayName": "Adarsh", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, "user3": {"displayName": "Shanki", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}};
+            var $applozic;	// = jQuery.noConflict(true);
+			var contactjson;
+            
+			//Sample json contains display name and photoLink for userId
+            //var contacts = {"user1": {"displayName": "Devashish", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, "user2": {"displayName": "Adarsh", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, "user3": {"displayName": "Shanki", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}};
+			
+			
+			
+			
+			
             function readMessage() {
                 //console.log(userId);
             }
@@ -695,18 +769,26 @@
             //callback function execute after plugin initialize.
             function onInitialize(status) {
                 if (status === 'success') {
+				
+					alert('Listo');
                     //write your logic exectute after plugin initialize.
                 }
             }
+			
             $(document).ready(function () {
-                $("#chat-form").on('submit', function () {
+			
+					
+					
+					contactjson = listaContactos(712);
+					
+                //$("#chat-form").on('submit', function () {
                     //Function to initialize chat plugin
-                    $applozic.fn.applozic({baseUrl:'https://apps.applozic.com',userId: $("#userId").val(), userName: 'Demo User', appId: '38ac7f5e01bca4281e59a80356f3ad91c',
+                    $applozic.fn.applozic({baseUrl:'https://apps.applozic.com',userId: v_userId, userName: v_userId, appId: '3b66345c921f7a78c8414e15221417cf7',
                         ojq: $original,
                         obsm: oModal,
-                        readConversation: readMessage, // readMessage function defined above
-                        contactDisplayName: displayName, // displayName function defined above
-                        contactDisplayImage: contactImageSrc, // contactImageSrc function defined above
+                        readConversation: readMessage, // readMessage function defined above	                        
+							//contactDisplayName: displayName, // displayName function defined above                       
+							//contactDisplayImage: contactImageSrc, // contactImageSrc function defined above
                         maxAttachmentSize: 25, //max attachment size in MB
                         notificationIconLink: "https://www.applozic.com/resources/images/applozic_icon.png",
                         desktopNotification: true,
@@ -715,18 +797,66 @@
                         groupUserCount: true,
                         onInit: function (response) {
                             if (response === 'success') {//callback function execute on plugin initialize
-                                $applozic.fn.applozic('loadTab', '');
-                                registerPushNotifications();
+                                $applozic.fn.applozic('loadTab', '');		
+								//console.log( "on init json Ajax:" + contactjson );
+                                //registerPushNotifications();
+																
                             }
                         }
                     });
+					
+				
 
-                    // var contactjson = {"contacts": [{"userId": "user1", "displayName": "Devashish", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, {"userId": "user2", "displayName": "Adarsh", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, {"userId": "user3", "displayName": "Shanki", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}]};
+                    //var contactjson = {"contacts": [{"userId": "pao.mejia069@gmail.com", "displayName": "Paola Mejia", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, {"userId": "user2", "displayName": "Adarsh", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}, {"userId": "user3", "displayName": "Shanki", "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}]};
+					
+					
+					//contactjson = {"contacts": [{"userId": "pao.mejia069@gmail.com", "displayName": "Paola Mejia", "imageLink": "https://conoceme.vip/juan/uploads/AwoYwvqbF3uJYSIvu1kA.jpg"}]};
+					
+					
                     // To load contact list use below function and pass contacts json in format shown above in variable 'contactjson'.
-                    // $applozic.fn.applozic('loadContacts', contactjson);
+					
+					console.log( "json afuera :" + contactjson );
+                    
+					$applozic.fn.applozic('loadContacts', contactjson ); 							
                     return false;
-                });
+                //});
             });
+			
+			function listaContactos( idUsuario){
+				var contactjson;
+				
+				$.ajax({  
+					url:  'https://conoceme.vip/juan/phps/chat_app_lista_favoritos.php?id='+idUsuario,
+						headers : { "Content-Type" : "application/json" },
+						type: 'get',      												 
+						success: function(data) { 						
+							
+							contactjson = JSON.parse( data );
+							//contactjson = JSON.stringify(data);
+							//console.log(JSON.stringify(data));
+							// contactjson = JSON.stringify('{"contacts":[{"userId":"pao.mejia069@gmail.com", "displayName":"PaolaMej\u00eda","imageLink":"https:\/\/localhost\/conoceMe\/uploads\/AwoYwvqbF3uJYSIvu1kA.jpg"}]}');	
+
+											  // {"contacts":[ { "userId": "pao.mejia069@gmail.com",  "displayName": "Paola Mejía",  "imageLink": "https://conoceme.vip/juan/uploads/AwoYwvqbF3uJYSIvu1kA.jpg" }
+
+						      // contactjson = {"contacts": [{"userId": "pao.mejia069@gmail.com", "displayName": "Paola Mejia", "imageLink": "https://conoceme.vip/juan/uploads/AwoYwvqbF3uJYSIvu1kA.jpg"}]};
+								//console.log( data.response.length );        
+							
+							//console.log( idUsuario );
+							console.log( "json Ajax:" + contactjson );
+							//console.log( eval(contactjson) );              
+							$applozic.fn.applozic('loadContacts', contactjson );
+					},
+					error: function( jqXhr, textStatus, errorThrown ){
+						alert(textStatus);
+						console.log( errorThrown );
+					}
+				});  
+				
+				return contactjson;
+  
+			};
+			
+			
 
             function registerPushNotifications() {
                 var push = PushNotification.init({
@@ -747,7 +877,7 @@
                             console.log('Device has been registered.');
 
                             var userPxy = {
-                                'applicationId': 'applozic-sample-app',
+                                'applicationId': '3b66345c921f7a78c8414e15221417cf7',
                                 'userId': $("#userId").val(),
                                 'registrationId': data.registrationId,
                                 'pushNotificationFormat': '1'

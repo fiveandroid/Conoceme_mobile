@@ -3,8 +3,8 @@
     Author     : devashish
 */
 .mck-box {
-	position: relative;		/*JVRA*/
-	top: 8%;				/* JVRA */
+	position: fixed;
+	top: 8%;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -25,8 +25,8 @@
 }
 
 .mck-sidebox {
-	position: relative !important;	/*JVRA*/
-	height: 92% !important;			/*JVRA*/
+	position: fixed !important;
+	height: 82%% !important;
 	right: 0 !important;
 	left: auto !important;
 	margin: 0 !important;
@@ -43,14 +43,6 @@
 	margin-right: -15px;
 	margin-left: -15px;
 }
-
-
-/* JVRA */
-.mck-row-name {
-	color: #ed3737;
-	
-}
-
 
 .mck-box * {
 	-webkit-box-sizing: content-box;
@@ -174,12 +166,11 @@
 }
 
 .mck-box div, .mck-box .mck-box-title {
-	font-family: Nunito, Helvetica, Arial, sans-serif;					/* Heslvetica Neue, Helvetica, Arial, sans-serif !important; JVRA */
+	font-family: Heslvetica Neue, Helvetica, Arial, sans-serif !important;
 }
 
 .mck-sidebox .mck-box-title {
-	color: #FFFFFF;		/*#333; JVRA */
-	margin-left 2%;
+	color: #333;
 }
 
 .mck-box .move-right {
@@ -519,6 +510,13 @@
 	left: auto;
 }
 
+.mck-sidebox .mck-center {
+	position: absolute;
+	top: 0;
+	right: 0;	
+	margin: auto;
+}
+
 .mck-box-title {
 	height: 48px;
 	font-size: 18px;
@@ -608,7 +606,6 @@
 	min-height: 49px;
 	text-align: left;
 	border-bottom: 1px solid #e5e5e5;
-	background-color: #ed3737;					/* JVRA */ 
 }
 
 .mck-box-top .icon {
@@ -792,7 +789,7 @@
 .mck-top-btn-panel {
 	margin: 0px;
 	padding: 4px 0;
-	background-color: #eceff1;    /* silver;  JVRA*/
+	background-color: silver;
 	width: 100%;
 	z-index: 1000;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -1003,7 +1000,6 @@
 }
 
 .mck-box .mck-contact-list .mck-conversation-topic {
-	left: 10%;
 	min-height: 15px;
 	text-align: left;
 	font-size: 12px;
@@ -1223,19 +1219,7 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 	right: 0;
 	bottom: 0;
 	left: 0;
-	overflow: auto;	
-}
-
-.mck-box-body .mck-message-inner-chat {
-	position: absolute;
-	background-color: #eceff1;
-	display: table-row;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	overflow: auto;
-	background-image:url("images/fondo_chat.jpg");	
 }
 
 .mck-gm-search-box .mck-box-body .mck-message-inner {
@@ -1536,7 +1520,7 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 	align-self: flex-end;
 	-webkit-animation-name: slideFromRight;
 	animation-name: slideFromRight;
-	background: #ffffff; 		/* #dcf8c6; JVRA */
+	background: #dcf8c6;
 }
 
 .mck-msg-right .mck-msg-box a {
@@ -1602,13 +1586,13 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 
 .mck-msg-left .mck-msg-box:after {
 	border-color: transparent;
-	border-right-color: #ffffff; 		/* #dcf8c6 JVRA */
+	border-right-color: #dcf8c6;
 	border-width: 11px;
 }
 
 .mck-msg-right .mck-msg-box:after {
 	border-color: transparent;
-	border-left-color: #ed3737;		/* #2196f3; JVRA */
+	border-left-color: #2196f3;
 	border-width: 11px;
 }
 
@@ -1749,7 +1733,6 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 
 .mck-contact-list .mck-alpha-contact-image, .mck-msg-avator .mck-alpha-contact-image {
 	border-radius: 110px;
-	margin-left: 2%;			/* JVRA */
 }
 
 .mck-alpha-contact-image .mck-contact-icon {
@@ -2233,7 +2216,7 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 	padding: 10px 14px 12px;
 	position: relative;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #ed3737;		/* #2196f3; JVRA */
+	background-color: #2196f3;
 }
 
 .mck-msg-avator-bubble.mck-msg-right .mck-msg-box {
@@ -3084,8 +3067,6 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 	text-align: left;
 }
 
-
-
 .mck-icon-user {
         background-position: -4px 3px;
 	width: 44px;
@@ -3125,10 +3106,7 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 	background-position: -10px -248px;
 	width: 30px;
 	height: 30px;
-	
 }
-
-
 
 .mck-icon-sun {
 	background-position: -10px -288px;
@@ -3143,24 +3121,21 @@ mck-sidebox .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus,
 }
 
 .mck-icon-send {
-	background-size: 20px; 		/*   background-position: -10px -368px;   */
+	background-position: -10px -368px;
 	width: 25px;
 	height: 25px;
-	background-image: url("https://conoceme.vip/juan/chat/images/enviar.png");
 }
 
 .mck-icon-smiley-blue {
-	background-size: 20px;     /* 	background-position: -10px -403px; JVRA */
+	background-position: -10px -403px;
 	width: 25px;
 	height: 25px;
-	background-image: url("https://conoceme.vip/juan/chat/images/emoticons.png");
 }
 
 .mck-icon-upload {
-	background-size: 20px;		/*  background-position: -10px -438px;  */ 
+	background-position: -10px -438px;
 	width: 25px;
 	height: 30px;
-	background-image: url("https://conoceme.vip/juan/chat/images/adjuntar.png");
 }
 
 .mck-icon-search {
